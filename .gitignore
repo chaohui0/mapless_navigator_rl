@@ -1,0 +1,8 @@
+**.log
+**.pyc
+ros/catkin_ws/build/
+ros/catkin_ws/devel/
+training/save_sddpg_weights/
+training/save_weights_real_GRU_original/
+training/train_spaic/runs
+**nohup.out

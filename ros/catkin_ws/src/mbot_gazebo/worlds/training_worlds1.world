@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!-- Own physics settings to speed up simulation -->
+    <physics type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <model name="target">
+      <link name="link">
+	<collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>0.2 0.2</point>
+              <point>0.2 -0.2</point>
+              <point>-0.2 -0.2</point>
+              <point>-0.2 0.2</point>
+              <height>0.001</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="target">
+          <geometry>
+            <polyline>
+              <point>0.2 0.2</point>
+              <point>0.2 -0.2</point>
+              <point>-0.2 -0.2</point>
+              <point>-0.2 0.2</point>
+              <height>0.001</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    
+<model name="env3wall1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>2 2</point>
+              <point>1 2</point>
+              <point>1 15</point>
+              <point>2 15</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall1">
+          <geometry>
+            <polyline>
+              <point>2 2</point>
+              <point>1 2</point>
+              <point>1 15</point>
+              <point>2 15</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="env3wall2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>2 14</point>
+              <point>2 15</point>
+              <point>15 15</point>
+              <point>15 14</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall2">
+          <geometry>
+            <polyline>
+              <point>2 14</point>
+              <point>2 15</point>
+              <point>15 15</point>
+              <point>15 14</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="env3wall3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>14 1</point>
+              <point>14 14</point>
+              <point>15 14</point>
+              <point>15 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall3">
+          <geometry>
+            <polyline>
+              <point>14 1</point>
+              <point>14 14</point>
+              <point>15 14</point>
+              <point>15 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="env3wall4">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>1 1</point>
+              <point>1 2</point>
+              <point>14 2</point>
+              <point>14 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall4">
+          <geometry>
+            <polyline>
+              <point>1 1</point>
+              <point>1 2</point>
+              <point>14 2</point>
+              <point>14 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+
+  </world>
+</sdf>
