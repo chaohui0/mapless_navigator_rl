@@ -15,7 +15,7 @@ def load_test_actor_network(dir, device, state_num=366, action_num=2, dim=(256, 
     :param dir: directory of pt file
     :return: actor_net
     """
-    actor_net = ActorNetSpiking(state_num, action_num, device
+    actor_net = ActorNetSpiking(state_num, action_num, device,
                          hidden1=dim[0],
                          hidden2=dim[1],
                          hidden3=dim[2],
