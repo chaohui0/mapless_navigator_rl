@@ -53,5 +53,5 @@ if __name__ == '__main__':
     if args.save == 1:
         SAVE_RESULT = True
     save_dir="../../training/save_weights_real_GRU_original"
-    save_dir="../../training/save_sddpg_weights_original_2/SNN_R1SNN_critic_weights_76.pth"
+    save_dir="../../training/save_sddpg_weights_original_2/SNN_R1SNN_actor_weights_77.pth"
     evaluate_sddpg(use_cuda=USE_CUDA, model_name='actor_net',save_dir=save_dir, is_save_result=SAVE_RESULT)
