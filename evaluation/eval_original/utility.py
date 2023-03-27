@@ -18,8 +18,7 @@ def load_test_actor_network(dir, device, state_num=366, action_num=2, dim=(256, 
     actor_net = ActorNetSpiking(state_num, action_num, device,
                          hidden1=dim[0],
                          hidden2=dim[1],
-                         hidden3=dim[2],
-                         devie=)
+                         hidden3=dim[2])
     actor_net.load_state_dict(torch.load(dir)['model_dict'])
     return actor_net
 
