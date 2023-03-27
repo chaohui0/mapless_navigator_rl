@@ -89,7 +89,7 @@ class RandEvalGpu:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         else:
             self.device = torch.device("cpu")
-        # self.actor_net.to(self.device)
+        self.actor_net.to(self.device)
         # Robot State
         self.robot_state_init = False
         self.robot_scan_init  = False
