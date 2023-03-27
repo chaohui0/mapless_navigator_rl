@@ -30,7 +30,7 @@ def evaluate_sddpg(pos_start=0, pos_end=199, model_name='actor_net', save_dir='.
     else:
         device = torch.device("cpu")
     # actor_net = load_spaic_actor_network(save_dir, model_name, device)
-    actor_net = load_test_actor_network(save_dir)
+    actor_net = load_test_actor_network(save_dir, device)
     eval = RandEvalGpu(actor_net, robot_init_list, goal_list, poly_list,
                        max_steps=1000, action_rand=0.01, goal_dis_min_dis=0.3,
                        is_spike=True, use_cuda=use_cuda)
